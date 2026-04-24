@@ -1,0 +1,73 @@
+:root {
+  --bg: #ffffff;
+  --text: #111;
+  --primary: #4f46e5;
+}
+
+.dark {
+  --bg: #111;
+  --text: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background: var(--bg);
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.hero {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.content {
+  padding: 50px;
+}
+
+.card {
+  background: rgba(0,0,0,0.05);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+form input, form textarea {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+form button {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
