@@ -2,11 +2,16 @@
   --bg: #ffffff;
   --text: #111;
   --primary: #4f46e5;
+  --card: #f9f9f9;
+  --border: #e5e5e5;
 }
 
 .dark {
-  --bg: #111;
+  --bg: #0f172a;
   --text: #ffffff;
+  --primary: #6366f1;
+  --card: #1e293b;
+  --border: #334155;
 }
 
 body {
@@ -16,58 +21,144 @@ body {
   color: var(--text);
 }
 
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 50px;
   background: var(--bg);
+  border-bottom: 1px solid var(--border);
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
   color: var(--text);
+  font-weight: 500;
 }
 
+nav a:hover {
+  color: var(--primary);
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* HERO */
 .hero {
   text-align: center;
   margin-top: 100px;
 }
 
 .btn {
-  padding: 10px 20px;
+  padding: 12px 25px;
   background: var(--primary);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* CONTENT */
 .content {
   padding: 50px;
 }
 
+/* PROJECT CARD */
 .card {
-  background: rgba(0,0,0,0.05);
+  background: var(--card);
   padding: 20px;
   margin: 20px 0;
-  border-radius: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
 }
 
-form input, form textarea {
-  display: block;
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 20px;
+}
+
+/* CONTACT BOX */
+.contact-box {
+  width: 100%;
+  max-width: 500px;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-box h1 {
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* FORM */
+form input,
+form textarea {
   width: 100%;
   margin: 10px 0;
-  padding: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  outline: none;
 }
 
+form input:focus,
+form textarea:focus {
+  border-color: var(--primary);
+}
+
+/* BUTTON */
 form button {
+  width: 100%;
   background: var(--primary);
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+form button:hover {
+  opacity: 0.9;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
 }
